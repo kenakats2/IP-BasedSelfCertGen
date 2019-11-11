@@ -1,15 +1,9 @@
 #!/bin/bash
 
-# ToDo: Global-ip-address of this server
-globalIP="128.212.56.90"
+set -e
 
-# ToDo: CA certs configuration
-country="JP"
-state="Tokyo"
-location="Chiyoda-ku"
-organization="MyOrganization"
-organizationUnit="IT system division"
-certExpirationDate=73000
+# Read conf file
+. generateCert.conf
 
 # Processing start
 # Copy openssl.cnf from default openssl directory
